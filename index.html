@@ -35,17 +35,13 @@ button {
 }
 </style>
 </head>
-
 <body>
-
 <h2>My Online Store</h2>
-
 <div class="product">
 <h3>Smart Watch</h3>
 <p>₹2500</p>
 <button onclick="addToCart('SW01','Smart Watch',2500)">Add to Cart</button>
 </div>
-
 <div class="product">
 <h3>Bluetooth Speaker</h3>
 <p>₹1800</p>
@@ -57,18 +53,14 @@ button {
 <p>₹3200</p>
 <button onclick="addToCart('WE03','Wireless Earbuds',3200)">Add to Cart</button>
 </div>
-
 <div class="product">
 <h3>Fitness Band</h3>
 <p>₹1500</p>
 <button onclick="addToCart('FB04','Fitness Band',1500)">Add to Cart</button>
 </div>
-
 <script>
-
 // Ensure page fully loads before firing events
 window.addEventListener('load', function () {
-
   // Track product impressions
   gtag('event', 'view_item_list', {
     item_list_name: 'Homepage Products',
@@ -79,11 +71,9 @@ window.addEventListener('load', function () {
       { item_id: 'FB04', item_name: 'Fitness Band', price: 1500 }
     ]
   });
-
 });
 
 function addToCart(id, name, price) {
-
   gtag('event', 'add_to_cart', {
     currency: 'INR',
     value: price,
@@ -94,11 +84,9 @@ function addToCart(id, name, price) {
       quantity: 1
     }]
   });
-
   alert(name + " added to cart!");
 }
 
 </script>
-
 </body>
 </html>
